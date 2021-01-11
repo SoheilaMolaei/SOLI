@@ -180,7 +180,7 @@ y_pred_kmeans = kmeans.fit_predict(x)
 print("Kmeans NMI",normalized_mutual_info_score(emd_lbls.cpu().detach().numpy(),y_pred_kmeans))
 print("Kmeans ACC",acc_score(emd_lbls.cpu().detach().numpy(),y_pred_kmeans))
 
-dims = [x.shape[-1], hid_units]
+dims = [x.shape[-1], hid_units,32]
 
 init = VarianceScaling(scale=1., mode='fan_in',
                            distribution='uniform')
