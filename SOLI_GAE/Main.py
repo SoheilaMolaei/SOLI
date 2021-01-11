@@ -25,6 +25,7 @@ from sklearn.metrics import roc_auc_score, average_precision_score
 from utils import mask_test_edges,get_roc_score,acc_score
 dataset = 'cora'
 
+
 # training params
 batch_size = 1
 nb_epochs = 100
