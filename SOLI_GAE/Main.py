@@ -54,10 +54,11 @@ graphMain=nx.from_numpy_matrix(adj.todense())
 listClique=list(nx.find_cliques(graphMain))
 
 for i in listClique:
-  for k,j in zip(i,i):
-    if j!=k:
-        Input[j]=Inputs[j]+ Inputs[k]
-        Input[k]=Inputs[j]+ Inputs[k]
+        for j in i:
+            for k in i:
+                if j!=k:
+                    Input[j]=Inputs[j]+ Inputs[k]
+                    Input[k]=Inputs[j]+ Inputs[k]
 
 features=Input
 
