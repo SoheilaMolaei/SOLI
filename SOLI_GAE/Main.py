@@ -36,8 +36,6 @@ lr = 0.001
 l2_coef = 0.0
 drop_prob = 0.0
 
-#middle_hid_unit
-hid_units = 700
 
 sparse = True
 nonlinearity = 'prelu' # special name to separate parameters
@@ -78,8 +76,7 @@ if not sparse:
     adj = torch.FloatTensor(adj[np.newaxis])
 labels = torch.FloatTensor(labels[np.newaxis])
 
-
-model = InfoPartitioned(ft_size, hid_units, nonlinearity)
+model = InfoPartitioned(ft_size, 700, nonlinearity)
 optimiser = torch.optim.Adam(model.parameters(), lr=lr, weight_decay=l2_coef)
 
 if torch.cuda.is_available():
@@ -184,7 +181,7 @@ y_pred_kmeans = kmeans.fit_predict(x)
 print("Kmeans NMI",normalized_mutual_info_score(emd_lbls.cpu().detach().numpy(),y_pred_kmeans))
 print("Kmeans ACC",acc_score(emd_lbls.cpu().detach().numpy(),y_pred_kmeans))
 
-dims = [x.shape[-1], hid_units,32]
+dims = [x.shape[-1], 700,32]
 
 init = VarianceScaling(scale=1., mode='fan_in',
                            distribution='uniform')
