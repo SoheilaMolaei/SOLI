@@ -275,4 +275,4 @@ tqdm.write('Test AP score: ' + str(ap_score))
 
 #Cora---ACC=0.765140, f1_macro=0.718944, precision_macro=0.804534, recall_macro=0.722651, f1_micro=0.765140, precision_micro=0.765140, recall_micro=0.765140, NMI=0.601065, ADJ_RAND_SCORE=0.566581
 #Citeseer---ACC=0.671175, f1_macro=0.619219, precision_macro=0.640110, recall_macro=0.621541, f1_micro=0.671175, precision_micro=0.671175, recall_micro=0.671175, NMI=0.420832, ADJ_RAND_SCORE=0.399086
-#pubmed ACC=0.670234, f1_macro=0.664024, precision_macro=0.687291, recall_macro=0.698920, f1_micro=0.670234, precision_micro=0.670234, recall_micro=0.670234, NMI=0.305828, ADJ_RAND_SCORE=0.282737
+
